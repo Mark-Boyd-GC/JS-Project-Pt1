@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="/">GamerViews</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a href="/reviews" class="nav-link">
+          Reviews
+        </a>
+      </li>
+
+      <% if (authorized) { %>
+        <li class="nav-item">
+          <a href="/reviews/new" class="nav-link">
+            New Review
+          </a>
+        </li>
+        
+      <% } %>
+    </ul>
+
+    <ul class="navbar-nav">
+      <% if (!authorized) { %>
+        <li class="nav-item">
+          <a href="/register" class="nav-link">
+            <i class="fa fa-user-plus"></i>
+            Register
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/login" class="nav-link">
+            <i class="fa fa-sign-in"></i>
+            Login
+          </a>
+        </li>
+      <% } else { %>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">
+            <i class="fa fa-sign-out"></i>
+            Logout
+          </a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,38 @@
+<!--
+  Step 1: The form must be sharable between the new and edit views.
+-->
+
+<form action="<%= (typeof actionPath === 'undefined') ? '/reviews' : actionPath %>", method="POST">
+  <% if (typeof actionPath !== 'undefined') { %>
+    <input type="hidden" name="id" value="<%= formData.id %>">
+  <% } %>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" class="form-control" value="<%= formData.title %>">
+  </div>
+
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" class="form-control summernote">
+      <%= formData.content %>
+    </textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="timePlayed">Time Played (hours)</label>
+    <input type="number" name="timePlayed" class="form-control" value="<%= formData.timePlayed %>">
+  </div>
+
+  <div class="form-group">
+    <label for="recommendation">Recommendation</label>
+    <select name="recommendation" class="form-control">
+      <option value="RECOMMENDED">Recommended</option>
+      <option value="NOT RECOMMENDED">Not Recommended</option>      
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-dark">Submit</button>
+  </div>
+</form>

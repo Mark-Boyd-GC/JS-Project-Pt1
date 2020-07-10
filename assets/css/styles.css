@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #2a475e;
+}
+
+header > h1, p, small, label {
+  color: #fff;
+}
+
+.card, .form-control {
+  background-color: #1b2838!important;
+  color: #fff!important;
+}
+
+.form-control::selection {
+  background-color: #1b2838!important;
+  color: #fff!important;
+}
+
+header:not(.home-cta), .alert {
+  margin-top: 80px;
+}
+
+.home-cta {
+  background: url('/images/background.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-cta::after {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+
+.home-cta > h1 {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 10rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.home-cta > h2 {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.form-inline {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.form-inline > .delete {
+  border: none;
+  background: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.form-inline > .delete:hover {
+  color: #a7a7a7;
+}
+
+.fa, .more, .content {
+  color: #fff;
+}
+
+.fa:hover, .more:hover{
+  color: #a7a7a7;
+}
+
+.bg-dark {
+  background-color: #1b2838!important;
+}
+
+.show-container {
+  padding: 0px 20px 10px 20px;
+  margin-top: 30px;
+}
+
+.btn-dark, .btn-primary, .show-container {
+  background-color: #1b2838;
+}
+
