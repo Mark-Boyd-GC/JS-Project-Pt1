@@ -17,12 +17,12 @@ exports.create = async (req, res) => {
     await User.register(user, req.body.password);
 
     req.flash('success', 'The user was successfully created');
-    res.redirect(`/login`);
+    res.redirect(`/`);
   } catch (error) {
-    console.log('Errors');
+    console.log(error.message);
     req.flash('danger', error.message);
 
     req.session.formData = req.body;
-    res.redirect(`${viewPath}/new`);
+    res.redirect(`/register`);
   }
 };
